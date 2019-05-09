@@ -64,24 +64,43 @@ toolkit:
 
 
 inputs:
-  - example_step_input: Default Value - you can leave this empty if you want to
+  - deployment_package_path: $BITRISE_APK_PATH
     opts:
-      title: "Example Step Input"
-      summary: Summary. No more than 2-3 sentences.
+      title: "Deployment Package path"
+      summary: Path to the APK or IPA
       description: |
-        Description of this input.
-
-        Can be Markdown formatted text.
+        This is the path to the APK file or IPA file that should be uploaded to AppCenter
       is_expand: true
       is_required: true
       value_options: []
 
-outputs:
-  - EXAMPLE_STEP_OUTPUT:
+  - appcenter_app_name: 
     opts:
-      title: "Example Step Output"
-      summary: Summary. No more than 2-3 sentences.
+      title: "AppCenter App Name"
+      summary: Name of your app from AppCenter in owner/name format
       description: |
-        Description of this output.
+        You can get this from the URL of your app in the AppCenter dashboard. For
+        detailed instructions see [https://intercom.help/appcenter/general-questions/how-to-find-the-app-name-and-owner-name-from-your-app-url](How to find the app name and owner name for your app).
+      is_expand: true
+      is_required: true
+      value_options: []
 
-        Can be Markdown formatted text.
+  - appcenter_token:
+    opts:
+      title: "AppCenter API Token"
+      summary: Authentication token
+      description: |
+        See [https://intercom.help/appcenter/api/how-to-use-app-centers-api](How to acquire an API token from App Center and make calls to the App Center API) for help
+      is_expand: true
+      is_required: true
+      value_options: []
+  - appcenter_group:
+    opts:
+      title: "Distribution Group Name"
+      summary: Name of the distribution group
+      description: |
+        Specify the name of the distribution group that should have access to this release.
+      is_expand: true
+      is_required: true
+      value_options: []
+
