@@ -72,7 +72,6 @@ inputs:
         This is the path to the APK file or IPA file that should be uploaded to AppCenter
       is_expand: true
       is_required: true
-      value_options: []
 
   - appcenter_app_name: 
     opts:
@@ -83,7 +82,6 @@ inputs:
         detailed instructions see [https://intercom.help/appcenter/general-questions/how-to-find-the-app-name-and-owner-name-from-your-app-url](How to find the app name and owner name for your app).
       is_expand: true
       is_required: true
-      value_options: []
 
   - appcenter_token:
     opts:
@@ -93,7 +91,7 @@ inputs:
         See [https://intercom.help/appcenter/api/how-to-use-app-centers-api](How to acquire an API token from App Center and make calls to the App Center API) for help
       is_expand: true
       is_required: true
-      value_options: []
+
   - appcenter_group:
     opts:
       title: "Distribution Group Name"
@@ -102,5 +100,4 @@ inputs:
         Specify the name of the distribution group that should have access to this release.
       is_expand: true
       is_required: true
-      value_options: []
 
